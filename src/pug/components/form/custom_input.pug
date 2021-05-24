@@ -1,0 +1,23 @@
+mixin custom_input(params)
+  .form_group(data-type=params.data_type)
+    if params.icon
+      .icon_block
+        i.icon-User
+    if params.label
+      label(for=params.name).h400_reg.text_dark=params.label
+    input.form_group_input(type=params.type ? params.type : 'text', name=params.name, placeholder=params.placeholder, minlength=params.min, maxlength=params.max required!=params.required )
+    .error_msg 
+      p.h400_reg.text_danger=params.error_msg
+    if params.type == 'password'
+      .show_pass_btn.fcs(data-status="hide" role='button')
+        i.icon-EyeSlash
+        i.icon-Eye
+
+//- type: text(null), password, email, number,
+//- name: string,
+//- label: string,
+//- placeholder: string,
+//- min: string,
+//- max: string
+//- icon: boolean
+//- data-type: input-with-icon, labeled-input-with-icon

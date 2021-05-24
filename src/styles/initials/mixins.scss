@@ -1,0 +1,63 @@
+@mixin transition02() {
+  transition: all 0.2s ease-out;
+}
+
+@mixin mobile {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin midDesk {
+  @media screen and (min-width: 993px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin onlyDesk {
+  @media screen and (min-width: 993px) {
+    @content;
+  }
+}
+
+@mixin largeDesk {
+  @media screen and (min-width: 1671px) {
+    @content;
+  }
+}
+
+@mixin curvedBg {
+  @media screen and (min-width: 1480px) {
+    @content;
+  }
+}
+
+// Fonts ~~~~~~~~~~~~~~~~~~~~~
+@mixin font($font-size, $color, $line-height: normal, $font-weight: normal) {
+  font-family: manrope, sans-serif;
+  font-size: $font-size * 1px;
+  color: $color;
+  @if $line-height == normal {
+    line-height: $line-height;
+  } @else {
+    line-height: $line-height * 1px;
+  }
+  font-weight: $font-weight;
+}
+
+@mixin typo(
+  $font-family,
+  $font-size,
+  $line-height: normal,
+  $font-weight: normal
+) {
+  font-family: $font-family;
+  font-size: $font-size * 1px;
+  @if $line-height == normal {
+    line-height: $line-height;
+  } @else {
+    line-height: $line-height * 1px;
+  }
+  font-weight: $font-weight;
+}
+// Fonts ~~~~~~~~~~~~~~~~~~~~~

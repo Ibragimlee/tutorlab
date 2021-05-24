@@ -1,0 +1,130 @@
+extends ../layout/main
+
+block variables
+  -var title = 'Uvodo FrontEnd';
+  -var bodyClass = 'StyleGuides';
+
+block content
+  include ../components/tempNav
+
+
+
+  main.page_min_height
+
+    section.simple_inputs 
+      h1.hb_2_semi_bold.full_grid.text_warning Simple Inputs
+     
+      include ../common/form/simple-input/simple-input
+      include ../common/form/simple-input/simple-input-required
+      include ../common/form/simple-input/simple-input-disabled
+      include ../common/form/simple-input/simple-input-iconed
+
+      h1.hb_2_semi_bold.full_grid.text_info Labeled Inputs
+
+      include ../common/form/label-input/label-input
+      include ../common/form/label-input/label-input-required
+      include ../common/form/label-input/label-input-iconed
+      include ../common/form/label-input/label-input-iconed-disabled
+
+      h1.hb_2_semi_bold.full_grid.text_brand Simple textarea
+
+      include ../common/form/simple-textarea/simple-textarea
+      include ../common/form/simple-textarea/simple-textarea-required
+
+      h1.hb_2_semi_bold.full_grid.text_dark Label textarea
+      include ../common/form/label-textarea/label-textarea
+      include ../common/form/label-textarea/label-textarea-disabled
+
+    section.buttons_grid
+      h1.hb_2_semi_bold.full_grid.text_white Primary
+      include ../common/buttons/primary/primary-btn
+      include ../common/buttons/primary/primary-btn-iconed
+      include ../common/buttons/primary/primary-btn-disabled
+      include ../common/buttons/primary/primary-btn-icon-only
+      include ../common/buttons/primary/primary-btn-circle
+      include ../common/buttons/primary/primary-btn-icon-only-circle
+      include ../common/buttons/primary/primary-btn-iconed-circle
+      include ../common/buttons/primary/primary-btn-loading
+      include ../common/buttons/primary/primary-btn-icon-only-loading
+      include ../common/buttons/primary/primary-btn-iconed-circle-loading
+
+      h1.hb_2_semi_bold.full_grid.text_white Primary white
+      include ../common/buttons/primary-w/primary-w-btn
+      include ../common/buttons/primary-w/primary-w-btn-iconed
+      include ../common/buttons/primary-w/primary-w-btn-disabled
+      include ../common/buttons/primary-w/primary-w-btn-icon-only
+      include ../common/buttons/primary-w/primary-w-btn-circle
+      include ../common/buttons/primary-w/primary-w-btn-icon-only-circle
+      include ../common/buttons/primary-w/primary-w-btn-iconed-circle
+      include ../common/buttons/primary-w/primary-w-btn-loading
+      include ../common/buttons/primary-w/primary-w-btn-icon-only-loading
+      include ../common/buttons/primary-w/primary-w-btn-iconed-circle-loading
+
+
+      h1.hb_2_semi_bold.full_grid.text_brand Secondary
+      include ../common/buttons/secondary/secondary-btn
+      include ../common/buttons/secondary/secondary-btn-iconed
+      include ../common/buttons/secondary/secondary-btn-disabled
+      include ../common/buttons/secondary/secondary-btn-icon-only
+      include ../common/buttons/secondary/secondary-btn-circle
+      include ../common/buttons/secondary/secondary-btn-icon-only-circle
+      include ../common/buttons/secondary/secondary-btn-iconed-circle
+      include ../common/buttons/secondary/secondary-btn-loading
+      include ../common/buttons/secondary/secondary-btn-icon-only-loading
+      include ../common/buttons/secondary/secondary-btn-iconed-circle-loading
+
+      h1.hb_2_semi_bold.full_grid.text_white Secondary white
+      include ../common/buttons/secondary-w/secondary-w-btn
+      include ../common/buttons/secondary-w/secondary-w-btn-iconed
+      include ../common/buttons/secondary-w/secondary-w-btn-disabled
+      include ../common/buttons/secondary-w/secondary-w-btn-icon-only
+      include ../common/buttons/secondary-w/secondary-w-btn-circle
+      include ../common/buttons/secondary-w/secondary-w-btn-icon-only-circle
+      include ../common/buttons/secondary-w/secondary-w-btn-iconed-circle
+      include ../common/buttons/secondary-w/secondary-w-btn-loading
+      include ../common/buttons/secondary-w/secondary-w-btn-icon-only-loading
+      include ../common/buttons/secondary-w/secondary-w-btn-iconed-circle-loading
+
+      h1.hb_2_semi_bold.full_grid.text_medium Secondary dark
+      include ../common/buttons/secondary-d/secondary-d-btn
+      include ../common/buttons/secondary-d/secondary-d-btn-iconed
+      include ../common/buttons/secondary-d/secondary-d-btn-disabled
+      include ../common/buttons/secondary-d/secondary-d-btn-icon-only
+      include ../common/buttons/secondary-d/secondary-d-btn-circle
+      include ../common/buttons/secondary-d/secondary-d-btn-icon-only-circle
+      include ../common/buttons/secondary-d/secondary-d-btn-iconed-circle
+      include ../common/buttons/secondary-d/secondary-d-btn-loading
+      include ../common/buttons/secondary-d/secondary-d-btn-icon-only-loading
+      include ../common/buttons/secondary-d/secondary-d-btn-iconed-circle-loading
+
+      h1.hb_2_semi_bold.full_grid.text_brand Flat
+      include ../common/buttons/flat/flat-btn
+      include ../common/buttons/flat/flat-btn-iconed
+      include ../common/buttons/flat/flat-btn-disabled
+      include ../common/buttons/flat/flat-btn-icon-only
+      include ../common/buttons/flat/flat-btn-circle
+      include ../common/buttons/flat/flat-btn-icon-only-circle
+      include ../common/buttons/flat/flat-btn-iconed-circle
+      include ../common/buttons/flat/flat-btn-loading
+      include ../common/buttons/flat/flat-btn-icon-only-loading
+      include ../common/buttons/flat/flat-btn-iconed-circle-loading
+
+      h1.hb_2_semi_bold.full_grid.text_white Flat white
+      include ../common/buttons/flat-w/flat-w-btn
+      include ../common/buttons/flat-w/flat-w-btn-iconed
+      include ../common/buttons/flat-w/flat-w-btn-disabled
+      include ../common/buttons/flat-w/flat-w-btn-icon-only
+      include ../common/buttons/flat-w/flat-w-btn-circle
+      include ../common/buttons/flat-w/flat-w-btn-icon-only-circle
+      include ../common/buttons/flat-w/flat-w-btn-iconed-circle
+      include ../common/buttons/flat-w/flat-w-btn-loading
+      include ../common/buttons/flat-w/flat-w-btn-icon-only-loading
+      include ../common/buttons/flat-w/flat-w-btn-iconed-circle-loading
+
+    section.simple_selects
+      h1.hb_2_semi_bold.full_grid.text_white Primary
+
+      include ../common/form/simple-select/simple-select
+      include ../common/form/label-select/label-select
+      include ../common/form/simple-checkbox/simple-checkbox
+  //- include ../includes/footer

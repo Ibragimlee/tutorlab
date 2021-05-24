@@ -1,0 +1,118 @@
+extends ../layout/main
+
+block variables
+  -var title = 'TutorLab';
+  -var bodyClass = 'index-page';
+
+block content
+  //- include ../includes/header
+  //- include ../includes/sideNav
+  main
+    section.fullheight_intro
+      include ../components/header/header.pug
+      .fullheight_content.container
+        .fullheight_content_left 
+          h1 Öyrənmək asandır 
+            br
+            |Hər yerdə və hər zaman
+          p Qısa zamanda istifadəyə veriləcək mobil tətbiqin 
+            br
+            |üstünlüklərindən yararlanmaq üçün
+          btn.blue_btn.show_register_modal Qeydiyyatdan keç
+        .fullheight_content_right
+          .image_block
+            img(src=require("../../assets/images/iphone.png"), alt="Phone image")
+    section#companies.companies.container
+      .company_flex
+        .img_block
+          img(src=require("../../assets/images/airbnb.svg"), alt="airbnb")
+        .img_block
+          img(src=require("../../assets/images/hubspot.svg"), alt="hubspot")
+        .img_block
+          img(src=require("../../assets/images/google.svg"), alt="google")
+        .img_block
+          img(src=require("../../assets/images/microsoft.svg"), alt="microsoft")
+        .img_block
+          img(src=require("../../assets/images/walmart.svg"), alt="wallmart")
+        .img_block
+          img(src=require("../../assets/images/fedex.svg"), alt="fedex")
+    section#about.about.container
+      .about_left
+        h2 Bütün narahatlıqlarınızı unudun! 
+          br 
+          |"TutorLab" mobil tətbiqi burada! 
+        p Repetitor xidməti ilə məşğul olan fərdi şəxslər və kurs fəaliyyəti ilə məşğul olan təhsil mərkəzləri üçün şagirdlər və tələbələr üzərində nəzarəti gücləndirəcək, valideyinləri övladlarının təhsil səviyyələrini, tədris prosesində davamiyyətini və gündəlik hazırlıq dərəcələri ilə daim məlumatlandıracaq və xəbərdar edəcək, eləcə də həm müəllim, həm də valideyn tərəfinin bütün tədris prosesini nəzarət altında saxlaya biləcək bir mobil tətbiq təqdim edirik.
+      .about_right
+        .image_block
+          img(src=require("../../assets/images/about_right.png"), alt="About image")
+    section#advantages.advantages.container 
+      h1 Tutor Lab üstünlükləri
+      .tabs_navigation
+        button#parentBtn.tab_btn.active Valideyn
+        button#teacherBtn.tab_btn Müəllim
+      .tabs_container
+        #tab_rails.tabs_rails(data-position="1")
+          .each_tab
+            .advantage_card
+              .icon.fcc 
+                img(src=require("../../assets/icons/advantages/1.svg"), alt="")
+              strong Dərsinizi daha asan idarə et
+              p Dərslərinizi və kurslarınızı daha asan idarə edə, tələbə və şagirdlərinizə  nəzarət edə bilərsiniz
+            .advantage_card
+              .icon.fcc 
+                img(src=require("../../assets/icons/advantages/2.svg"), alt="")
+              strong Təhsil keyfiyyətinə nəzarət et
+              p Övladının dərslərə davamiyyətini və hazırlıq səviyyəsini nəzarət altında saxla
+            .advantage_card
+              .icon.fcc 
+                img(src=require("../../assets/icons/advantages/3.svg"), alt="")
+              strong Vaxtını səmərəli istifadə et
+              p İstifadə üçün rahat və çox sadə mobil tətbiq vasitəsilə tədris prosesini asanlaşdırın
+            .advantage_card
+              .icon.fcc 
+                img(src=require("../../assets/icons/advantages/4.svg"), alt="")
+              strong Statistik məlumatlar əldə et
+              p Həftəlik, aylıq, rüblük və illik inkişafla bağlı hesabatlar əldə et
+            .advantage_card
+              .icon.fcc 
+                img(src=require("../../assets/icons/advantages/5.svg"), alt="")
+              strong Müəllimlərin fəaliyyətini izlə
+              p Məktəbdənkənar hazırlıq kurslarının və repetitor fəaliyyətinin effektivliyini izlə
+            .advantage_card
+              .icon.fcc 
+                img(src=require("../../assets/icons/advantages/6.svg"), alt="")
+              strong Təhsil keyfiyyətinə nəzarət et
+              p Övladının dərslərə davamiyyətini və hazırlıq səviyyəsini nəzarət altında saxla
+          .each_tab.active
+            .advantage_card
+              .icon.fcc 
+                img(src=require("../../assets/icons/advantages/1.svg"), alt="")
+              strong Dərsinizi daha asan idarə et
+              p Dərslərinizi və kurslarınızı daha asan idarə edə, tələbə və şagirdlərinizə  nəzarət edə bilərsiniz
+            .advantage_card
+              .icon.fcc 
+                img(src=require("../../assets/icons/advantages/2.svg"), alt="")
+              strong Təhsil keyfiyyətinə nəzarət et
+              p Övladının dərslərə davamiyyətini və hazırlıq səviyyəsini nəzarət altında saxla
+            .advantage_card
+              .icon.fcc 
+                img(src=require("../../assets/icons/advantages/3.svg"), alt="")
+              strong Vaxtını səmərəli istifadə et
+              p İstifadə üçün rahat və çox sadə mobil tətbiq vasitəsilə tədris prosesini asanlaşdırın
+            .advantage_card
+              .icon.fcc 
+                img(src=require("../../assets/icons/advantages/4.svg"), alt="")
+              strong Statistik məlumatlar əldə et
+              p Həftəlik, aylıq, rüblük və illik inkişafla bağlı hesabatlar əldə et
+            .advantage_card
+              .icon.fcc 
+                img(src=require("../../assets/icons/advantages/5.svg"), alt="")
+              strong Müəllimlərin fəaliyyətini izlə
+              p Məktəbdənkənar hazırlıq kurslarının və repetitor fəaliyyətinin effektivliyini izlə
+            .advantage_card
+              .icon.fcc 
+                img(src=require("../../assets/icons/advantages/6.svg"), alt="")
+              strong Təhsil keyfiyyətinə nəzarət et
+              p Övladının dərslərə davamiyyətini və hazırlıq səviyyəsini nəzarət altında saxla
+    section#attendance.attendance.container
+      

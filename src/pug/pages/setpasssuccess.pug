@@ -1,0 +1,26 @@
+extends ../layout/main
+include ../components/form/custom_input
+include ../components/buttons/button
+include ../common/snackbacks/snackback
+
+
+block variables
+  -var title = 'Uvodo Reset Password';
+  -var bodyClass = '';
+
+
+block content
+  section.signin_block.container
+    .white_squad
+      .reset_desc_block
+        .success_icon.fcc 
+          i.icon-Check
+        h1.h700_bold.text_dark Well done!
+        p.h400_reg.text_medium You have successfully change password. Please use your new password when logging in.
+      +custom_button({href: 'signin.html', type: 'btn-primary', width: 'full', text: 'Log in to continue' })  
+  .navigate_back.container
+    a.to_signin(href="signin.html")
+      i.icon-ArrowLeft 
+    p.h500_semi_bold.text_dark Reset Password
+  
+  

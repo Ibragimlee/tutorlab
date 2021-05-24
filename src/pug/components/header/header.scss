@@ -1,0 +1,57 @@
+@import "../../../styles/initials/variables.scss";
+@import "../../../styles/initials/mixins.scss";
+
+header.main_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  height: 72px;
+
+  .main_header_left {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: 40px;
+    height: 30px;
+
+    img {
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  nav.header_nav {
+    display: flex;
+    align-items: center;
+
+    .each_link {
+      @include font(14, $black, 20, 700);
+
+      &:not(:nth-last-child(1)) {
+        margin-right: 32px;
+      }
+    }
+  }
+
+  .main_header_right {
+    .downloads {
+      a {
+        width: 135px;
+        height: 40px;
+
+        &:not(:nth-last-child(1)) {
+          margin-right: 12px;
+        }
+
+        img {
+          max-width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

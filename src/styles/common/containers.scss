@@ -1,0 +1,27 @@
+.icon_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fcs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.fce {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container {
+  padding: $paddingDesk;
+}

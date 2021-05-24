@@ -1,0 +1,20 @@
+mixin custom_button(params)
+  if params.href
+    a.btn(id!="params.id",data-type=params.type, data-style=params.style, data-content=params.content, data-width=params.width, href=params.href)
+      if params.icon
+        i.icon-Plus
+      if params.text 
+      =params.text
+  else
+    button.btn(id!=params.id,type="submit" data-type=params.type, data-style=params.style, data-content=params.content, data-width=params.width)
+      if params.icon
+        i.icon-Plus
+      if params.text 
+        =params.text
+
+//- href --> link, null --> button
+//- data-types: btn-primary, btn-primary-white, btn-secondary, btn-secondary-white, btn-secondary-dark, btn-flat, btn-flat-white
+//- data-style: circle
+//- data-content: null, iconed, icon-only
+//- text button text
+//- full_width: true(width:100%)

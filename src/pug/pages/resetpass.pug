@@ -1,0 +1,29 @@
+extends ../layout/main
+include ../components/form/custom_input
+include ../components/buttons/button
+include ../common/snackbacks/snackback
+
+
+block variables
+  -var title = 'Uvodo Reset Password';
+  -var bodyClass = '';
+
+
+block content
+  section.signin_block.container
+    .white_squad
+      .uvodo_logo.fcc
+        img(src=require("../../assets/images/uvodo_logo.svg"), alt="")
+      .reset_desc_block
+        p.h400_reg.text_medium Enter the email associated with your account and we’ll send an email to reset password.
+      form#reset_pass_form.reset_pass_form(action="post") 
+        - const email_input_vars = {type: 'email', name: 'email', label: 'Email', placeholder: 'Enter your e-mail address', min: '3', max: '32', error_msg: 'Wrong e-mail', required: true }
+        +custom_input(email_input_vars)
+        +custom_button({href: null, type: 'btn-primary', width: 'full', text: 'Send instructions' })  
+  .navigate_back.container
+    a.to_signin(href="signin.html")
+      i.icon-ArrowLeft 
+    p.h500_semi_bold.text_dark Reset Password
+  +snackback({text:'We have e-mailed your password reset link!', close: true})
+  
+  

@@ -1,0 +1,40 @@
+// notary chamber
+$white: #ffffff;
+$black: #18191f;
+$dark_blue: #3281ff;
+$blue: #a0dcff;
+$turqoise: #2ec5ce;
+$cream: #ffe3c1;
+$light_grey: #fafafa;
+$grey: #969bab;
+$placeholder: #cccccc;
+$blue_blur: #f2f7ff;
+
+// box shadows ~~~~~~~~~~~~~~~~~~~~~~~~~
+$box_shadow_1: 0px 2px 2px rgba(0, 0, 0, 0.05);
+$box_shadow_2: 0px 2px 4px rgba(0, 0, 0, 0.05);
+$box_shadow_3: 6px 3px 6px rgba(0, 0, 0, 0.05);
+$box_shadow_4: 0px 8px 16px rgba(0, 0, 0, 0.05);
+$box_shadow_5: 0px 32px 40px rgba(0, 0, 0, 0.05);
+
+// box shadows ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+$containerWidth: 1140px;
+$paddingMobile: 0 calc((100% - 92vw) / 2);
+$paddingDesk: 0 calc((50% - #{$containerWidth / 2}));
+$paddingMidDesk: 0 calc((50% - 45vw));
+$paddingTab: 0 calc((100% - 88vw) / 2);
+$paddingLargeDesk: 0 calc((50% - 20vw) / 2);
+
+$reverseMobile: calc((100% - 91vw) / 2);
+$reversePaddingDesk: calc(50% - #{$containerWidth / 2});
+$reverseMidDesk: calc((50% - 45vw));
+$reverseTab: calc((100% - 88vw) / 2);
+$reverseLargeDesk: calc((100% - 70vw) / 2);
+
+$leftDeskMargin: calc(50vw - #{$containerWidth});
+$leftMidDeskMargin: calc((-50vw + 45vw));
+$leftLargeDeskMargin: calc(50vw - 35vw);
+
+$fullRightOuterContainer: calc(100% + (50vw - #{$containerWidth / 2}));
+$fullRightOuterContainerPadding: calc((50vw - #{$containerWidth / 2}));

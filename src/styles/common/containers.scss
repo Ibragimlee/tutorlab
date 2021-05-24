@@ -25,3 +25,15 @@
 .container {
   padding: $paddingDesk;
 }
+
+@include midDesk {
+  .container {
+    padding: $paddingMidDesk;
+  }
+}
+
+@include mobile {
+  .container {
+    padding: $paddingMobile;
+  }
+}

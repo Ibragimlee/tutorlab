@@ -33,16 +33,16 @@ section.fullheight_intro {
       padding-left: 2.8%;
       padding-top: 7.2vh;
       h1 {
-        @include font(50, $black, 64, 800);
+        @include font(50, $black, 64, f_semi_bold);
         margin-bottom: 8px;
       }
 
       p {
-        @include font(24, $black, 64, 300);
+        @include font(24, $black, 64, f_light);
       }
 
       .blue_btn {
-        @include font(20, $white, 30, 800);
+        @include font(20, $white, 30, f_semi_bold);
         padding: 16px 26px;
         background-color: $dark_blue;
         border-radius: 8px;
@@ -141,12 +141,12 @@ section.about {
   .about_left {
     padding-left: 16px;
     h2 {
-      @include font(28, $black, 40, 800);
+      @include font(28, $black, 40, f_semi_bold);
       margin-bottom: 16px;
     }
 
     p {
-      @include font(18, $black, 32, 400);
+      @include font(18, $black, 32, f_reg);
     }
   }
 
@@ -168,7 +168,7 @@ section.advantages {
   h1 {
     margin: 0 auto;
     text-align: center;
-    @include font(48, $black, 64, 800);
+    @include font(48, $black, 64, f_semi_bold);
   }
 
   .tabs_navigation {
@@ -234,6 +234,7 @@ section.advantages {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 64px 32px;
     padding: 0 15px;
+    align-items: flex-start;
     transition: 0.5s ease-out;
     opacity: 0.5;
     filter: blur(1);
@@ -254,11 +255,11 @@ section.advantages {
     strong {
       margin-top: 24px;
       margin-bottom: 8px;
-      @include font(24, $black, 32, 700);
+      @include font(22, $black, 32, f_semi_bold);
     }
 
     p {
-      @include font(16, $black, 26, 400);
+      @include font(16, $black, 26, f_reg);
     }
   }
 }
@@ -286,12 +287,20 @@ section.attendance {
     padding-top: 56px;
     overflow: hidden;
 
+    .image_box {
+      display: flex;
+      align-items: flex-end;
+      width: 68%;
+      max-width: 360px;
+    }
+
     .image_block {
-      width: 66%;
+      width: 100%;
       filter: drop-shadow(10px 15px 30px rgba(41, 41, 42, 0.5));
 
       img {
         display: block;
+        margin-bottom: -1px;
       }
     }
   }
@@ -302,12 +311,12 @@ section.attendance {
     flex-direction: column;
 
     h1 {
-      @include font(40, $black, 54, 800);
+      @include font(40, $black, 54, f_semi_bold);
     }
 
     p {
       display: block;
-      @include font(18, $black, 32, 400);
+      @include font(18, $black, 32, f_reg);
       margin: 32px 0;
     }
 
@@ -316,7 +325,7 @@ section.attendance {
       display: flex;
       align-items: center;
       position: relative;
-      @include font(20, $dark_blue, 30, 700);
+      @include font(20, $dark_blue, 30, f_semi_bold);
 
       &:hover {
         &:after {
@@ -369,7 +378,7 @@ section.achievements {
 
   .achievements_left {
     h1 {
-      @include font(48, $black, 64, 800);
+      @include font(48, $black, 64, f_semi_bold);
       margin-bottom: 8px;
     }
 
@@ -405,7 +414,7 @@ section.achievements {
       span {
         display: flex;
         align-items: center;
-        @include font(28, $black, 40, 700);
+        @include font(28, $black, 40, f_semi_bold);
         position: relative;
 
         &[data-plus="1"] {
@@ -415,7 +424,7 @@ section.achievements {
         }
       }
       small {
-        @include font(16, $black, 26, 400);
+        @include font(16, $black, 26, f_reg);
       }
     }
   }
@@ -450,7 +459,7 @@ section.subscribe {
       flex-direction: column;
 
       strong {
-        @include font(40, $white, 54, 800);
+        @include font(40, $white, 54, f_semi_bold);
         margin-bottom: 32px;
       }
 
@@ -459,7 +468,7 @@ section.subscribe {
         align-items: center;
 
         input {
-          @include font(14, $black, 24, 400);
+          @include font(14, $black, 24, f_reg);
           background-color: $white;
           padding: 11px 16px;
           border-radius: 5px 0 0 5px;
@@ -471,7 +480,7 @@ section.subscribe {
         }
 
         .subsribe_btn {
-          @include font(14, $white, 20, 800);
+          @include font(14, $white, 20, f_semi_bold);
           padding: 14px 24px;
           border: none;
           border-radius: 0 5px 5px 0;
@@ -506,13 +515,13 @@ section.mobile_apps {
 
     strong {
       display: block;
-      @include font(40, $black, 50, 800);
+      @include font(40, $black, 50, f_semi_bold);
       margin-bottom: 8px;
     }
 
     p {
       display: block;
-      @include font(18, $black, 32, 400);
+      @include font(18, $black, 32, f_reg);
       margin-bottom: 84px;
     }
 
@@ -627,7 +636,7 @@ footer.main_footer {
 
     .copyright {
       p {
-        @include font(14, $white, 24, 400);
+        @include font(14, $white, 24, f_reg);
       }
     }
   }
@@ -637,7 +646,7 @@ footer.main_footer {
     align-items: center;
 
     a {
-      @include font(14, $white, 24, 600);
+      @include font(14, $white, 24, f_semi_bold);
       transition: 0.2s ease-out;
 
       &:hover {
@@ -660,7 +669,7 @@ footer.main_footer {
       flex-direction: column;
       width: 70%;
       strong {
-        @include font(20, $white, 30, 600);
+        @include font(20, $white, 30, f_semi_bold);
         display: block;
         margin-bottom: 24px;
       }
@@ -681,7 +690,7 @@ footer.main_footer {
         span {
           display: block;
           margin-left: 10px;
-          @include font(14, $white, 24, 400);
+          @include font(14, $white, 24, f_reg);
         }
       }
     }

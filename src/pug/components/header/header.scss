@@ -29,7 +29,8 @@ header.main_header {
     align-items: center;
 
     .each_link {
-      @include font(14, $black, 20, 700);
+      // @include font(14, $black, 20, f_semi_bold);
+      @include font(14, $black, 20, f_semi_bold);
 
       &:not(:nth-last-child(1)) {
         margin-right: 32px;

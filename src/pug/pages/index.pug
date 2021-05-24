@@ -115,4 +115,102 @@ block content
               strong Təhsil keyfiyyətinə nəzarət et
               p Övladının dərslərə davamiyyətini və hazırlıq səviyyəsini nəzarət altında saxla
     section#attendance.attendance.container
-      
+      .attendance_content
+        .attendance_left
+          .image_block 
+            img(src=require("../../assets/images/iphone2.png"), alt="") 
+        .attendance_right
+          h1 Davamiyyət, Qiymətləndirmə və Müəllim şərhləri
+          p Tədris prosesinə dair xüsusi qeydlər əlavə etmək, valideyinlərlə əlaqə yaratmaq, müxtəlif müəllimlər və kursların fəaliyyətini izləmək, şagird və tələbələrinizin digər kurslara dair nəticələri ilə tanış olmaq, sınaq imtahanlarında təqdim olunan sualların tərtib olunmasında iştirak etmək kimi üstünlüklər təklif olunur.
+          button.btn-arrow.show_register_modal Bildiriş al
+    section#achievements.achievements.container
+      .achievements_content
+        .achievements_left 
+          h1 Mobil tətbiqdən yararlananmaq istəyən istifadəçi sayı
+          p Təhsilə nəzarətdə innovativ və rəqəmsal həll
+        .achievements_right
+          .counter_card
+            .counter_card_img.fcc 
+              img(src=require("../../assets/icons/advantages/1.svg"), alt="")
+            .counter_card_text
+              span(data-plus="1") 10000
+              small Qeydiyyatdan keçən
+          .counter_card
+            .counter_card_img.fcc 
+              img(src=require("../../assets/icons/advantages/4.svg"), alt="")
+            .counter_card_text
+              span(data-plus="0") 12
+              small Fənn sayı
+          .counter_card
+            .counter_card_img.fcc 
+              img(src=require("../../assets/icons/advantages/5.svg"), alt="")
+            .counter_card_text
+              span(data-plus="0") 300
+              small Müəllim
+          .counter_card
+            .counter_card_img.fcc 
+              img(src=require("../../assets/icons/advantages/7.svg"), alt="")
+            .counter_card_text
+              span(data-plus="1") 1000
+              small Valideyn
+    section#subscribe.subscribe.container 
+      .subscribe_content
+        .subscribe_content_left 
+          img(src=require("../../assets/icons/email_block_img.svg"), alt="")
+        .subscribe_content_right
+          strong Yeniliklərdən xəbərdar olmaq üçün
+          form(action="#")#subscribe_form.subscribe_form 
+            input#subscribe_inp(type="email", name="subscribe_email" placeholder="E-poçtunuzu daxil edin") 
+            button.subsribe_btn(type="submit") Abunə ol      
+    section#mobile_apps.mobile_apps.container 
+      .mobile_apps_content
+        .mobile_apps_left
+          strong Mobil tətbiqi İOS və Android platdormalarında
+          p Övladınızın məktəbdənkənar hazırlıq kurslarının effektivliyi haqqında heç bir məlumatınız yoxdur və ödəniş qarşılığında təqdim olunan xidmət səviyyəsini nəzarət altında saxlayın
+
+          .download_links
+            a(href="https://google.com")
+              img(src=require("../../assets/icons/playstore.svg"), alt="Playstore")  
+            a(href="https://appstore.com")
+              img(src=require("../../assets/icons/appstore.svg"), alt="Appstore")  
+        .mobile_apps_right
+          .image_1
+            .image_block
+              img(src=require("../../assets/images/iphone3.png"), alt="Iphone")
+          .image_2
+            .image_block
+              img(src=require("../../assets/images/iphone4.png"), alt="Iphone")
+    footer.main_footer.container
+      .left 
+        .logo
+          a(href="#")
+            img(src=require("../../assets/icons/footer/logo.svg"), alt="logo")
+        nav.socials
+          a(href="http://" target="_blank")
+            img(src=require("../../assets/icons/footer/instagram.svg"), alt="Instagram") 
+          a(href="http://" target="_blank")
+            img(src=require("../../assets/icons/footer/dribble.svg"), alt="Dribble") 
+          a(href="http://" target="_blank")
+            img(src=require("../../assets/icons/footer/twitter.svg"), alt="twitter") 
+          a(href="http://" target="_blank")
+            img(src=require("../../assets/icons/footer/youtube.svg"), alt="youtube") 
+        .copyright
+          p © 2021 TutorLab. Bütün hüquqlar qorunur.
+      .middle
+        nav.footer_nav
+          a(href="#about").each_link Haqqımızda 
+          a(href="#advantages").each_link Üstünlüklər 
+          a(href="#disciplines").each_link Fənlər 
+          a(href="#contacts").each_link Əlaqə 
+      .right 
+        .flex_right
+          strong Bizimlə əlaqə
+          a.contact_line(href="tel:+994551111111") 
+            img(src=require("../../assets/icons/footer/phone.svg"), alt="Phone icon")
+            span +994551111111
+          a.contact_line(href="mailto:example@hotmail.com") 
+            img(src=require("../../assets/icons/footer/email.svg"), alt="Email icon") 
+            span hello@tutotlab.az
+          a.contact_line(href="maps.google.com") 
+            img(src=require("../../assets/icons/footer/geo.svg"), alt="Geolocation icon")
+            span  Bakı, Nərimanov ray., Əhməd Rəcəbli 46A

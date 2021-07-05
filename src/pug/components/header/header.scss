@@ -56,3 +56,19 @@ header.main_header {
     }
   }
 }
+
+@include mobile {
+  header.main_header {
+    nav.header_nav {
+      display: none;
+    }
+    .logo {
+      margin-right: 0;
+      height: 24px;
+    }
+    .main_header_right .downloads a {
+      width: auto;
+      height: 28px;
+    }
+  }
+}

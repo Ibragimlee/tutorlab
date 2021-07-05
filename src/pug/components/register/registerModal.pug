@@ -1,0 +1,55 @@
+section.register_popup(data-status="0")
+  .white_box
+    a.close_modal_btn.close_btn(href="index.html") &times;
+    .left_side
+      form#register_form(action="#")
+        .form_group
+          span.title İstifadə təyinatını seçin
+          .radios_div 
+            label.radio-label 
+              input.hidden-checkbox(type="radio", name="isParent", value="true")
+              .icon
+                img(src=require("../../../assets/icons/checkmark.svg"), alt="checkbox-icon")
+              span Valideyn
+            label.radio-label 
+              input.hidden-checkbox(type="radio", name="isParent", value="false")
+              .icon
+                img(src=require("../../../assets/icons/checkmark.svg"), alt="checkbox-icon")
+              span Müəllim
+          .error_message Lütfən seçim edin
+        .form_group
+          span.title Ad 
+          input#firstname_inp(type="text", name="firstname" placeholder="Adınızı daxil edin" minlength="3" required )
+          .error_message Minimal simvol sayı: 3
+        .form_group
+          span.title Soyad 
+          input#lastname_inp(type="text", name="lastname" placeholder="Soyadınızı daxil edin" minlength="3" required )
+          .error_message Minimal simvol sayı: 3
+        .form_group
+          span.title Mobil nömrə 
+          input#phoneNumber_inp(type="text", name="phoneNumber" placeholder="+994XXXXXXXXX" minlength="13" maxlength="13" inputmode="numeric" required )
+          .error_message Simvol sayı: 13
+        .form_group
+          span.title E-poçt 
+          input#email_inp(type="email", name="email" placeholder="Elektron poçtunuzu daxil edin" required )
+          .error_message E-poçt formatı düzgün deyil
+        button#sub_reg_form.submit_btn Qeydiyyatdan keç
+    .right_side
+      .info_block
+        h1 Mobil tətbiq ən qısa zamanda istifadəyə veriləcək!
+        p Qeydiyyatdan keçən istifadəçilərə mobil tətbiq istifadəyə verilən zaman xəbərdarlıq ediləcək və onlar ilk olaraq mobil tətbiqin üstünlüklərindən yararlana biləcəklər
+      .image_block
+        .image_container
+          img.anim(data-anim="fade_full_to_top"   src=require("../../../assets/images/iphone5.png"), alt="Iphone image")
+          .absolute_1.anim(data-anim="fade_absolute_1" data-delay="0.4")
+            img(src=require("../../../assets/images/register_1.png"), alt="animation")
+          .absolute_2.anim(data-anim="fade_absolute_1" data-delay="0.6")
+            img(src=require("../../../assets/images/register_2.png"), alt="animation")
+
+
+section.successfull_reg
+  .white_box
+    .icon
+      img(src="https://img.icons8.com/color/48/000000/checkmark--v2.png")
+    h1 Uğurla geydiyyatdan keçdiniz!
+    a.close_modal_btn.close_btn(href="index.html") &times;

@@ -20,5 +20,7 @@ import "./styles/design.scss";
 // import "./scripts/formValidations";
 import "./scripts/modules/authmodule";
 import "./scripts/commons/snackbacks";
+import "./scripts/commons/animations";
 import "./scripts/forms/forms-groups";
 import "./scripts/main";
+import "./pug/components/register/registerModal";

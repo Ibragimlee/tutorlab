@@ -1,0 +1,345 @@
+section.register_popup {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: $white, $alpha: 0.2);
+  transition: 0.3s ease-out;
+  z-index: 9999;
+  visibility: visible;
+  transform: scale(1);
+  padding: 48px 0;
+
+  .white_box {
+    display: grid;
+    grid-template-columns: 340px calc(100% - 128px - 340px);
+    grid-gap: 128px;
+    background-color: $white;
+    position: relative;
+    width: 87vw;
+    max-width: 1120px;
+    min-height: 781px;
+    height: max-content;
+    border-radius: 32px;
+    filter: drop-shadow(0px 20px 20px rgba(41, 41, 42, 0.8));
+    overflow: hidden;
+    padding: 0 calc(100% - 95%);
+
+    &:before {
+      right: -27%;
+      bottom: -115%;
+      width: 1200px;
+      height: 1200px;
+      content: "";
+      z-index: -1;
+      display: block;
+      background-color: #ffe296;
+      position: absolute;
+      border-radius: 50%;
+    }
+  }
+
+  .left_side {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    height: max-content;
+    overflow-y: auto;
+    padding: 16px 0;
+    padding-right: 30px;
+  }
+
+  .close_btn {
+    @include font(32, $black, 32, f_reg);
+    position: absolute;
+    display: block;
+    right: 24px;
+    top: 24px;
+  }
+
+  .form_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    span.title {
+      @include font(16, $black, 32, f_reg);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .radios_div {
+      display: flex;
+      align-items: center;
+    }
+
+    .radio-label {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      position: relative;
+      @include font(14, $black, 20, f_semi_bold);
+      margin-bottom: 0;
+
+      &:nth-child(1) {
+        margin-right: 56px;
+      }
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .icon {
+          background-color: $dark_blue;
+          border: 1px solid $dark_blue;
+        }
+      }
+
+      .icon {
+        display: flex;
+        width: 32px;
+        height: 32px;
+        background-color: $white;
+        margin-right: 12px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        transition: 0.2s ease-out;
+        border: 3px solid #ececec;
+
+        img {
+          max-width: 18px;
+        }
+      }
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      border: 1px solid #bdbdbd;
+      padding: 12px 18px;
+      @include font(13, $black, 22, f_reg);
+      transition: 0.3s ease-out;
+      border-radius: 6px;
+
+      &::placeholder {
+        color: #cccccc;
+      }
+
+      &:focus {
+        border: 1px solid $dark_blue;
+      }
+    }
+
+    .error_message {
+      display: none;
+      @include font(10, $red, 14, f_reg);
+      margin-top: 4px;
+    }
+
+    &.error {
+      .error_message {
+        display: block;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        border: 1px solid $red;
+      }
+    }
+  }
+
+  button.submit_btn {
+    width: 100%;
+    padding: 20px;
+    @include font(13, $white, 20, f_semi_bold);
+    border-radius: 5px;
+    background-color: $dark_blue;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($color: $dark_blue, $amount: 20%);
+    }
+  }
+
+  .right_side {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .info_block {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      h1 {
+        @include font(40, $black, 54, f_semi_bold);
+        margin-top: 92px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        @include font(18, $black, 32, f_reg);
+      }
+    }
+
+    .image_block {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      .image_container {
+        filter: drop-shadow(10px 15px 30px rgba(41, 41, 42, 0.5));
+        position: relative;
+        img {
+          display: block;
+        }
+
+        .absolute_1,
+        .absolute_2 {
+          display: block;
+          position: absolute;
+        }
+
+        .absolute_1 {
+          top: 103px;
+          width: 217px;
+          height: 49px;
+          left: -69px;
+        }
+
+        .absolute_2 {
+          top: 213px;
+          width: 217px;
+          height: 49px;
+          left: -43px;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 32px 0;
+
+    .white_box {
+      grid-template-columns: 100%;
+      width: 91vw;
+      min-height: unset;
+      filter: none;
+      border: 2px solid darken($color: #ececec, $amount: 0%);
+      border-radius: 12px;
+      padding: 12px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .right_side {
+      display: none;
+    }
+
+    .left_side {
+      height: max-content;
+    }
+
+    form {
+      height: max-content;
+      padding: 12px 0;
+      padding-right: 0;
+    }
+
+    .close_btn {
+      right: 12px;
+      top: 12px;
+    }
+  }
+}
+
+section.successfull_reg,
+section.successfull_subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: $black, $alpha: 0.5);
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  position: fixed;
+  transition: 0.5s ease-out;
+  transform: scale(1.2);
+  opacity: 0;
+  visibility: hidden;
+
+  .white_box {
+    border-radius: 8px;
+    width: 50%;
+    padding: 48px;
+    background-color: $white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .icon {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .close_btn {
+      @include font(32, $black, 32, f_reg);
+      position: absolute;
+      display: block;
+      right: 24px;
+      top: 24px;
+    }
+
+    h1 {
+      @include font(32, $black, 48, f_semi_bold);
+      text-align: center;
+    }
+  }
+
+  &.active {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  @include mobile {
+    .white_box {
+      width: 91vw;
+    }
+  }
+}

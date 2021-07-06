@@ -64,10 +64,12 @@ section.fullheight_intro {
 
       .image_block {
         width: 100%;
+        max-width: 320px;
         filter: drop-shadow(10px 15px 30px rgba(41, 41, 42, 0.5));
 
         img {
           max-width: 100%;
+          height: auto;
           object-fit: contain;
         }
       }
@@ -291,11 +293,13 @@ section.attendance {
 
     .image_block {
       width: 100%;
+      max-width: 320px;
       display: flex;
       filter: drop-shadow(10px 15px 30px rgba(41, 41, 42, 0.5));
 
       img {
         display: block;
+        height: auto;
         margin-bottom: -1px;
       }
     }
@@ -554,10 +558,12 @@ section.mobile_apps {
 
       img {
         display: block;
+        height: auto;
       }
 
       .image_block {
         display: flex;
+        max-width: 232px;
         filter: drop-shadow(10px 15px 30px rgba(41, 41, 42, 0.5));
       }
     }
@@ -571,10 +577,12 @@ section.mobile_apps {
 
       img {
         display: block;
+        height: auto;
       }
 
       .image_block {
         display: flex;
+        max-width: 232px;
         filter: drop-shadow(10px 15px 30px rgba(41, 41, 42, 0.5));
       }
     }

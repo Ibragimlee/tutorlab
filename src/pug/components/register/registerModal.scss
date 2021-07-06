@@ -213,6 +213,8 @@ section.register_popup {
         position: relative;
         img {
           display: block;
+          max-width: 280px;
+          height: auto;
         }
 
         .absolute_1,

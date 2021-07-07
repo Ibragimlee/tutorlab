@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TutorLab</title>
+  <link href="./css/main.css" rel="stylesheet"></head>
+  <body class="index-page">
+<section class="register_popup" data-status="0">
+  <div class="white_box"><a class="close_modal_btn close_btn" href="index.html">&times;</a>
+    <div class="left_side">
+      <form id="register_form" action="#">
+        <div class="form_group"><span class="title">İstifadə təyinatını seçin</span>
+          <div class="radios_div"> 
+            <label class="radio-label"> 
+              <input class="hidden-checkbox" type="radio" name="isParent" value="true">
+              <div class="icon"><img src="src/assets/icons/checkmark.svg" alt="checkbox-icon"></div><span>Valideyn</span>
+            </label>
+            <label class="radio-label"> 
+              <input class="hidden-checkbox" type="radio" name="isParent" value="false">
+              <div class="icon"><img src="src/assets/icons/checkmark.svg" alt="checkbox-icon"></div><span>Müəllim</span>
+            </label>
+          </div>
+          <div class="error_message">Lütfən seçim edin</div>
+        </div>
+        <div class="form_group"><span class="title">Ad </span>
+          <input id="firstname_inp" type="text" name="firstname" placeholder="Adınızı daxil edin" minlength="3" required>
+          <div class="error_message">Minimal simvol sayı: 3</div>
+        </div>
+        <div class="form_group"><span class="title">Soyad </span>
+          <input id="lastname_inp" type="text" name="lastname" placeholder="Soyadınızı daxil edin" minlength="3" required>
+          <div class="error_message">Minimal simvol sayı: 3</div>
+        </div>
+        <div class="form_group"><span class="title">Mobil nömrə </span>
+          <input id="phoneNumber_inp" type="text" name="phoneNumber" placeholder="+994XXXXXXXXX" minlength="13" maxlength="13" inputmode="numeric" required>
+          <div class="error_message">Simvol sayı: 13</div>
+        </div>
+        <div class="form_group"><span class="title">E-poçt </span>
+          <input id="email_inp" type="email" name="email" placeholder="Elektron poçtunuzu daxil edin" required>
+          <div class="error_message">E-poçt formatı düzgün deyil</div>
+        </div>
+        <button class="submit_btn" id="sub_reg_form">Qeydiyyatdan keç</button>
+      </form>
+    </div>
+    <div class="right_side">
+      <div class="info_block">
+        <h1>Mobil tətbiq ən qısa zamanda istifadəyə veriləcək!</h1>
+        <p>Qeydiyyatdan keçən istifadəçilərə mobil tətbiq istifadəyə verilən zaman xəbərdarlıq ediləcək və onlar ilk olaraq mobil tətbiqin üstünlüklərindən yararlana biləcəklər</p>
+      </div>
+      <div class="image_block">
+        <div class="image_container"><img class="anim" data-anim="fade_full_to_top" src="src/assets/images/iphone5.png" alt="Iphone image">
+          <div class="absolute_1 anim" data-anim="fade_absolute_1" data-delay="0.4"><img src="src/assets/images/register_1.png" alt="animation"></div>
+          <div class="absolute_2 anim" data-anim="fade_absolute_1" data-delay="0.6"><img src="src/assets/images/register_2.png" alt="animation"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="successfull_reg">
+  <div class="white_box">
+    <div class="icon"><img src="https://img.icons8.com/color/48/000000/checkmark--v2.png"></div>
+    <h1>Uğurla geydiyyatdan keçdiniz!</h1><a class="close_modal_btn close_btn" href="index.html">&times;</a>
+  </div>
+</section>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>
